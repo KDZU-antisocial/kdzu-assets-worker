@@ -1,6 +1,7 @@
 export default {
 	async fetch(request, env) {
 		const url = new URL(request.url);
+		// Remove leading slash for R2 key
 		const key = url.pathname.startsWith('/') ? url.pathname.slice(1) : url.pathname;
 		const object = await env.ASSETS.get(key);
 		if (object) {

@@ -1,4 +1,4 @@
-name = "kdzu-assets-worker"
+name = "kdzu-static-worker"
 main = "src/index.js"
 account_id = "38b2250cde779e4a92c63d139be80a9c"
 compatibility_date = "2024-06-01"
@@ -7,3 +7,13 @@ compatibility_date = "2024-06-01"
 binding = "ASSETS"
 bucket_name = "kdzu-static"
 preview_bucket_name = "kdzu-static"
+
+[env.production]
+main = "src/index.js"
+workers_dev = false
+routes = ["static.kdzu.org/*"]
+
+  [[env.production.r2_buckets]]
+  binding = "ASSETS"
+  bucket_name = "kdzu-static"
+  preview_bucket_name = "kdzu-static"
