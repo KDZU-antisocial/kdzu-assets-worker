@@ -1,0 +1,9 @@
+name = "kdzu-assets-worker"
+main = "src/index.js"
+account_id = "38b2250cde779e4a92c63d139be80a9c"
+compatibility_date = "2024-06-01"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "kdzu-static"
+preview_bucket_name = "kdzu-static"
