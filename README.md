@@ -10,6 +10,10 @@ This Cloudflare Worker serves static files from an R2 bucket. Here’s how it wo
 **In summary:**  
 This worker acts as a simple static file server, delivering files stored in your R2 bucket.
 
+## Deploying with a Github Action
+
+This repo is deployed to Cloudflare when `dev` is merged into the `main` branch. The default branch is set to `dev`.
+
 ## Features
 
 - Serves static assets (JS, CSS, SVG, etc.) from R2 storage
